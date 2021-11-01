@@ -74,7 +74,7 @@ import tn.esprit.spring.services.UserServiceImpl;
 		 void testDeleteUser() {
 		
 			us.deleteUser("19");
-			Assertions.assertNull(us.retrieveUser("13"));
+			Assertions.assertNull(us.retrieveUser("19"));
 	
 		}
 		
