@@ -36,7 +36,7 @@ import tn.esprit.spring.services.UserServiceImpl;
 		 void testRetrieveAllUsers() {
 			List<User> listUsers = us.retrieveAllUsers(); 
 			// if there are 7 users in DB : 
-			Assertions.assertEquals(3, listUsers.size());
+			Assertions.assertEquals(5, listUsers.size());
 		
 			
 		}
@@ -73,8 +73,8 @@ import tn.esprit.spring.services.UserServiceImpl;
 		@Order(5)
 		 void testDeleteUser() {
 		
-			us.deleteUser("18");
-			Assertions.assertNull(us.retrieveUser("18"));
+			us.deleteUser("19");
+			Assertions.assertNull(us.retrieveUser("13"));
 	
 		}
 		
