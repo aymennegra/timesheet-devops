@@ -24,7 +24,7 @@ import tn.esprit.spring.services.UserServiceImpl;
 
 @SpringBootTest
 @TestMethodOrder(OrderAnnotation.class)
-public class UserServiceImplTest {
+ class UserServiceImplTest {
 	private static final Logger l = LogManager.getLogger(UserServiceImpl.class);
 	
 
@@ -33,7 +33,7 @@ public class UserServiceImplTest {
 	
 		@Test
 		@Order(1)
-		public void testRetrieveAllUsers() {
+		 void testRetrieveAllUsers() {
 			List<User> listUsers = us.retrieveAllUsers(); 
 			// if there are 7 users in DB : 
 			Assertions.assertEquals(3, listUsers.size());
@@ -44,37 +44,37 @@ public class UserServiceImplTest {
 		
 		@Test
 		@Order(2)
-		public void testAddUser() throws ParseException {
+		 void testAddUser() throws ParseException {
 			SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 			Date d = dateFormat.parse("2015-03-23");
-			User u = new User("AYMEN", "NEGRA", d, Role.INGENIEUR); 
+			User u = new User("AYMEN", "NEGRA22", d, Role.INGENIEUR); 
 			User userAdded = us.addUser(u); 
 			Assertions.assertEquals(u.getLastName(), userAdded.getLastName());
 		}
 	 
 		@Test
 		@Order(3)
-		public void testModifyUser() throws ParseException   {
+		 void testModifyUser() throws ParseException   {
 			SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 			Date d = dateFormat.parse("2015-03-23");
-			User u = new User(2L, "Mayssa444", "Mayssa", d, Role.INGENIEUR); 
+			User u = new User(2L, "Mayssa11111", "Mayssa", d, Role.INGENIEUR); 
 			User userUpdated  = us.updateUser(u); 
 			Assertions.assertEquals(u.getLastName(), userUpdated.getLastName());
 		}
 	
 		@Test
 		@Order(4)
-		public void testRetrieveUser() {
+		 void testRetrieveUser() {
 			User userRetrieved = us.retrieveUser("2"); 
 			Assertions.assertEquals(2L, userRetrieved.getId());
 		}
 		
 		@Test
 		@Order(5)
-		public void testDeleteUser() {
+		 void testDeleteUser() {
 		
-			us.deleteUser("17");
-			Assertions.assertNull(us.retrieveUser("17"));
+			us.deleteUser("18");
+			Assertions.assertNull(us.retrieveUser("18"));
 	
 		}
 		

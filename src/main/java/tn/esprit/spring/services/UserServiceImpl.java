@@ -55,7 +55,7 @@ public class UserServiceImpl implements IUserService {
 	public void deleteUser(String id) {
 		userRepository.deleteById(Long.parseLong(id));
 	}
-
+	
 	@Override
 	public User retrieveUser(String id) {
 		User u = null;
@@ -70,7 +70,6 @@ public class UserServiceImpl implements IUserService {
 			l.error("error in retrieveUser() : "+e);
 		}
 		return u; 
-
 	}
 
 }
