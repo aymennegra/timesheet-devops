@@ -73,8 +73,8 @@ import tn.esprit.spring.services.UserServiceImpl;
 		@Order(5)
 		 void testDeleteUser() {
 		
-			us.deleteUser("30");
-			Assertions.assertNull(us.retrieveUser("30"));
+			us.deleteUser("31");
+			Assertions.assertNull(us.retrieveUser("31"));
 	
 		}
 		
